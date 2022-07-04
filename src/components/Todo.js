@@ -72,7 +72,7 @@ useEffect(() => {
     </form>
   );
   const viewTemplate = (
-    <div className="stack-small">
+    <div className="stack-small" data-testid="view-template">
       <div className="c-cb">
           <input
             id={props.id}

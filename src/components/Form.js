@@ -15,13 +15,14 @@ const Form=(props)=>
     return(
         <form onSubmit={handleSubmit} data-testid="Form">
         <h2 className="label-wrapper">
-          <label htmlFor="new-todo-input" className="label__lg">
+          <label htmlFor="new-todo-input" className="label__lg" data-testid="form-heading">
             What needs to be done?
           </label>
         </h2>
         <input
         type="text"
         id="new-todo-input"
+        data-testid="form-input"
         className="input input__lg"
         name="text"
         autoComplete="off"

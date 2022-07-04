@@ -1,5 +1,7 @@
+import { toHaveValue } from '@testing-library/jest-dom/dist/matchers';
+import {render} from '@testing-library/react';
 import { shallow } from 'enzyme';
-import Recat from 'react';
+import React from 'react';
 import FilterButton from './FilterButton';
 
 describe("Rendering of FilterButton Component",()=>
@@ -11,6 +13,15 @@ describe("Rendering of FilterButton Component",()=>
     const filterButtonExists=filterButtonComponent.find(Text);
 
     expect(filterButtonExists).toBeDefined;
+    })
+
+    it("Should have filter button",()=>
+    {
+        const { getByTestId } = render(<FilterButton />);
+
+        const filterButtonElement = getByTestId("FilterButton");
+
+        expect(filterButtonElement).toBeInTheDocument();
     })
     
 })
