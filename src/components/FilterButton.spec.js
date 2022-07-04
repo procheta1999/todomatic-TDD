@@ -31,6 +31,7 @@ describe("FilterButton works properly",()=>{
     const mockedFilter=jest.fn();
     
     it("Should filter tasks properly",()=>{
+        
         const name="ALL";
         const {getByTestId}= render(<FilterButton name={name} isPressed={true} setFilter={mockedFilter}/>);
         const filterButtonComponent=getByTestId("FilterButton");
