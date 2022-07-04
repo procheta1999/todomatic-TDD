@@ -30,7 +30,7 @@ const Form=(props)=>
         onChange={handleChange}
       />
 
-        <button type="submit" className="btn btn__primary btn__lg">
+        <button type="submit" className="btn btn__primary btn__lg" data-testid="form-button">
           Add
         </button>
       </form>

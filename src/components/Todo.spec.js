@@ -1,5 +1,5 @@
 import { shallow } from "enzyme";
-import {render, screen} from '@testing-library/react';
+import { fireEvent, render } from "@testing-library/react";
 import React from "react";
 import Todo from "./Todo";
 
@@ -28,11 +28,4 @@ describe("Rendering of Todo Component",()=>{
 
         expect(viewTemplate).toBeInTheDocument();
     })
-    // it("Should have edit template",()=>{
-    //     const { getByTestId }= render(<Todo/>);
-
-    //     const editTemplate = getByTestId("edit-template");
-
-    //     expect(editTemplate).toBeInTheDocument();
-    // })
 })
